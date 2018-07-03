@@ -11,3 +11,13 @@ Activate the virtual environment.
 
 `pip install -r requirements.txt`
 
+## Working on the project
+
+Navigate to the directory containing this repository, then `cd` into the repository.
+`cd stanford-ai4all-vision`
+
+Activate the virtual environment.
+`source .env/bin/activate`
+
+Start the ipython notebook.
+`ipython notebook`
