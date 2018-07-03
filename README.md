@@ -19,5 +19,8 @@ Navigate to the directory containing this repository, then `cd` into the reposit
 Activate the virtual environment.
 `source .env/bin/activate`
 
+Enter the notebook directory. 
+`cd notebooks`
+
 Start the ipython notebook.
 `ipython notebook`
