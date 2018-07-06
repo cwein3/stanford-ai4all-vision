@@ -10,6 +10,7 @@ def create_trucksplanes_dataset():
     Creates a dataset from the trucks and planes dataset, using color
     histograms. You must slice the data and labels into a training and validation set.
     Try using roughly 10% of your training data for the validation!
+
     Try experimenting with different bins and values for use_hsv!
     """
 
@@ -28,12 +29,7 @@ def create_trucksplanes_dataset():
     # number of training and validation points
     num_val = features.shape[0]//10
     num_train = features.shape[0] - num_val
-
-    data_train = None
-    labels_train = None
-    data_validation = None
-    labels_validation = None
-
+    
     ## YOUR CODE HERE
     ## END YOUR CODE
 
@@ -42,8 +38,9 @@ def create_trucksplanes_dataset():
 def create_uganda_dataset():
     """
     Creates a dataset from Uganda satellite features. You must slice the data
-    and labels into a training and validation set. As before, try using roughly
+    and labels into a training and validation set. As before, try using roughly 
     10% of your data as the validation set.
+
     """
 
     # features will be of shape (dataset size, num features)
@@ -57,11 +54,6 @@ def create_uganda_dataset():
     # number of training and validation points
     num_val = features.shape[0]//10
     num_train = features.shape[0] - num_val
-
-    data_train = None
-    labels_train = None
-    data_validation = None
-    labels_validation = None
 
     ## YOUR CODE HERE
     ## END YOUR CODE
@@ -98,8 +90,8 @@ def cross_validation(use_satellite = False):
     for params in product(learning_rates, regularizations, batch_sizes, epochs):
         lr, reg, batch, epoch = params
         logreg_trainer = LogisticRegression(
-            num_features,
-            lr,
+            num_features, 
+            lr, 
             reg,
             batch,
             epoch)
@@ -112,3 +104,4 @@ def cross_validation(use_satellite = False):
 
     print("### FINISHED CROSS VALIDATION ###")
     return best_hyperparameters
+
