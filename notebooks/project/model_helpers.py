@@ -27,13 +27,15 @@ def sgd(data, labels, weights, learning_rate, regularization_rate):
     Loop over all the data and labels, one at a time, and update the weights using the logistic
     regression learning rule.
 
-    HINT: You will need "predict_probability" to complete this function.
+    HINT: We already call on "predict_probability" for you for this function. Try to use the output 
+    in the logistic regression learning rule!
     HINT: As before, data is of shape (dataset size, num features), and weights is 
     of shape (num features, 1)
     HINT: during each iteration of the loop, you call predict probability, apply the logistic
     regression rule, and then perform the regularization update.
     """
     for i in range(data.shape[0]):
+        prob = predict_probability(data[i, :], weights)
         ## YOUR CODE HERE
         ## END YOUR CODE
 
