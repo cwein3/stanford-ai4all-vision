@@ -30,11 +30,6 @@ def create_trucksplanes_dataset():
     num_val = features.shape[0]//10
     num_train = features.shape[0] - num_val
     
-    data_train = None
-    labels_train = None
-    data_validation = None
-    labels_validation = None
-    
     ## YOUR CODE HERE
     ## END YOUR CODE
 
@@ -60,11 +55,6 @@ def create_uganda_dataset():
     num_val = features.shape[0]//10
     num_train = features.shape[0] - num_val
 
-    data_train = None
-    labels_train = None
-    data_validation = None
-    labels_validation = None
-    
     ## YOUR CODE HERE
     ## END YOUR CODE
 
